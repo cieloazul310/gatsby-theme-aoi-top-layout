@@ -1,0 +1,10 @@
+{
+  "name": "gatsby-plugin-aoi-top-layout",
+  "version": "0.0.3",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "@material-ui/core": "^4.9.5",
+    "react-helmet": "^5.2.1"
+  }
+}
