@@ -3,26 +3,27 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import TopThemeProvider from './TopThemeProvider';
 import AppStateProvider from './AppStateProvider';
+import ThemeDispatchContext from '../utils/ThemeStateContext';
+import themeReducer from '../utils/ThemeState';
 
-import { ThemeDispatchContext } from '../utils/ThemeDispatchContext';
-import { themeReducer } from '../utils/themeReducer';
-
-
-/**
- * TODO:
- * 1. Do localStorage have ['paletteType', 'useSystemTheme'] ?
- * 2. Do your system like dark mode?
- * 3. initial value ( 'light', false )
- * localStorage > prefersDarkMode > initialValue
- */
-export default function TopLayout({ children, storedPaletteType, storedUseSystemTheme }) {
+export default function TopLayout({
+  children,
+  storedPaletteType,
+  storedUseSystemTheme
+}) {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [themeState, themeDispatch] = React.useReducer(themeReducer, {
     darkMode: storedPaletteType === 'dark',
     useSystemTheme: storedUseSystemTheme || false
   });
   const { darkMode, useSystemTheme } = themeState;
-  const paletteType = useSystemTheme ? (prefersDarkMode ? 'dark' : 'light') : darkMode ? 'dark' : 'light';
+  const paletteType = useSystemTheme
+    ? prefersDarkMode
+      ? 'dark'
+      : 'light'
+    : darkMode
+    ? 'dark'
+    : 'light';
 
   // persist paletteType
   React.useEffect(() => {
@@ -34,7 +35,9 @@ export default function TopLayout({ children, storedPaletteType, storedUseSystem
 
   return (
     <TopThemeProvider paletteType={paletteType}>
-      <ThemeDispatchContext.Provider value={{ state: themeState, dispatch: themeDispatch }}>
+      <ThemeDispatchContext.Provider
+        value={{ state: themeState, dispatch: themeDispatch }}
+      >
         <AppStateProvider>{children}</AppStateProvider>
       </ThemeDispatchContext.Provider>
     </TopThemeProvider>

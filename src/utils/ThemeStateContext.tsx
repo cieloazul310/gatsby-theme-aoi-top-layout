@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { initialThemeState, ThemeState, ThemeAction } from './themeReducer';
+import { initialThemeState, ThemeState, ThemeAction } from './ThemeState';
 
 type Context = { state: ThemeState; dispatch: React.Dispatch<ThemeAction> };
-export const ThemeDispatchContext = React.createContext<Context>({
+const ThemeDispatchContext = React.createContext<Context>({
   state: initialThemeState(),
   dispatch: () => {
     throw new Error();
   }
 });
+export default ThemeDispatchContext;
 
 // Context Hooks
 export function useThemeContextState() {

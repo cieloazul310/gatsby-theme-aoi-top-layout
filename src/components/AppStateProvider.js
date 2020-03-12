@@ -1,7 +1,6 @@
 import React from 'react';
 import AppStateContext from '../utils/AppStateContext';
-import reducer from '../utils/reducer';
-import { initialAppState } from '../utils/AppState';
+import reducer, { initialAppState } from '../utils/AppState';
 
 export default function AppStateProvider({ children }) {
   const [state, dispatch] = React.useReducer(reducer, initialAppState);
