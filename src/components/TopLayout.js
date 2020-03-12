@@ -1,11 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { ThemeDispatchContext } from '../../src/utils/ThemeDispatchContext';
-import { themeReducer } from '../../src/utils/themeReducer';
-//import useLocalStorage from '../../src/utils/useLocalStorage';
+
 import TopThemeProvider from './TopThemeProvider';
 import AppStateProvider from './AppStateProvider';
+
+import { ThemeDispatchContext } from '../utils/ThemeDispatchContext';
+import { themeReducer } from '../utils/themeReducer';
+
 
 /**
  * TODO:
@@ -28,7 +29,7 @@ export default function TopLayout({ children, storedPaletteType, storedUseSystem
     localStorage.setItem('paletteType', darkMode ? 'dark' : 'light');
   }, [darkMode]);
   React.useEffect(() => {
-    localStorage.setItem('useSystemTheme', JSON.stringify(useSystemTheme));
+    localStorage.setItem('useSystemTheme', useSystemTheme);
   }, [useSystemTheme]);
 
   return (
@@ -39,9 +40,3 @@ export default function TopLayout({ children, storedPaletteType, storedUseSystem
     </TopThemeProvider>
   );
 }
-
-TopLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-  storedPaletteType: PropTypes.string.isRequired,
-  storedUseSystemTheme: PropTypes.bool.isRequired
-};

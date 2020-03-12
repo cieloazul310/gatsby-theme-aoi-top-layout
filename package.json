@@ -1,10 +1,14 @@
 {
-  "name": "gatsby-plugin-aoi-top-layout",
+  "name": "gatsby-theme-aoi-top-layout",
   "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
     "@material-ui/core": "^4.9.5",
     "react-helmet": "^5.2.1"
+  },
+  "dependencies": {
+    "gatsby-plugin-react-helmet": "^3.1.23",
+    "gatsby-plugin-typescript": "^2.2.2"
   }
 }

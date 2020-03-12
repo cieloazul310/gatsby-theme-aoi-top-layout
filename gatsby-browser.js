@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TopLayout from './TopLayout';
-//import useLocalStorage from '../../src/utils/useLocalStorage';
+import TopLayout from './src/components/TopLayout';
 
 export const wrapRootElement = ({ element }) => {
   const storedPaletteType = localStorage.getItem('paletteType');
-  const storedUseSystemTheme = localStorage.getItem('useSystemTheme');
+  const storedUseSystemTheme = JSON.parse(localStorage.getItem('useSystemTheme'));
   return (
-    <TopLayout storedPaletteType={storedPaletteType} storedUseSystemTheme={storedUseSystemTheme}>
+    <TopLayout
+      storedPaletteType={storedPaletteType}
+      storedUseSystemTheme={storedUseSystemTheme}
+    >
       {element}
     </TopLayout>
   );

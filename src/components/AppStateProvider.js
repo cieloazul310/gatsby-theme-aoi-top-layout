@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import AppStateContext from '../../src/utils/AppStateContext';
-import reducer from '../../src/utils/reducer';
-import { initialAppState } from '../../src/utils/AppState';
+import AppStateContext from '../utils/AppStateContext';
+import reducer from '../utils/reducer';
+import { initialAppState } from '../utils/AppState';
 
 export default function AppStateProvider({ children }) {
   const [state, dispatch] = React.useReducer(reducer, initialAppState);
@@ -12,7 +11,3 @@ export default function AppStateProvider({ children }) {
     </AppStateContext.Provider>
   );
 }
-
-AppStateProvider.PropTypes = {
-  children: PropTypes.node.isRequired
-};
