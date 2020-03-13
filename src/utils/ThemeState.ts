@@ -4,31 +4,26 @@ export interface ThemeState {
 }
 export type PaletteType = 'light' | 'dark';
 
-export const initialThemeState = (
-  darkMode: boolean = false,
-  useSystemTheme: boolean = false
-): ThemeState => ({
+export const initialThemeState = (darkMode: boolean = false, useSystemTheme: boolean = false): ThemeState => ({
   darkMode,
-  useSystemTheme
+  useSystemTheme,
 });
 
-export type ThemeAction =
-  | { type: 'TOGGLE_DARKMODE' }
-  | { type: 'TOGGLE_USE_SYSTEM_THEME' };
+export type ThemeAction = { type: 'TOGGLE_DARKMODE' } | { type: 'TOGGLE_USE_SYSTEM_THEME' };
 
 export default function themeReducer(state: ThemeState, action: ThemeAction) {
   switch (action.type) {
     case 'TOGGLE_DARKMODE':
       return {
         ...state,
-        darkMode: !state.darkMode
+        darkMode: !state.darkMode,
       };
     case 'TOGGLE_USE_SYSTEM_THEME':
       return {
         ...state,
-        useSystemTheme: !state.useSystemTheme
+        useSystemTheme: !state.useSystemTheme,
       };
     default:
       throw new Error(`Unrecognized action type`);
   }
-};
+}

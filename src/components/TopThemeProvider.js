@@ -13,6 +13,7 @@ export default function TopThemeProvider({ children, paletteType }) {
     return createMuiTheme({
       ...initialMuiTheme,
       palette: {
+        ...initialMuiTheme.palette.primary,
         primary: {
           main:
             paletteType === 'dark'
@@ -20,6 +21,7 @@ export default function TopThemeProvider({ children, paletteType }) {
               : initialMuiTheme.palette.primary.main
         },
         secondary: {
+          ...initialMuiTheme.palette.secondary,
           main:
             paletteType === 'dark'
               ? lighten(initialMuiTheme.palette.secondary.main, 0.4)

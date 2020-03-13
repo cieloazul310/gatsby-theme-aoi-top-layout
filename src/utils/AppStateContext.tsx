@@ -8,7 +8,7 @@ const AppStateContext = React.createContext<{
   state: initialAppState,
   dispatch: () => {
     throw new Error();
-  }
+  },
 });
 
 export default AppStateContext;

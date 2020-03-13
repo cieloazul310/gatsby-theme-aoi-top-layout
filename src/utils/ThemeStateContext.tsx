@@ -6,7 +6,7 @@ const ThemeDispatchContext = React.createContext<Context>({
   state: initialThemeState(),
   dispatch: () => {
     throw new Error();
-  }
+  },
 });
 export default ThemeDispatchContext;
 
