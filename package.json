@@ -1,6 +1,8 @@
 {
   "name": "gatsby-theme-aoi-top-layout",
-  "version": "0.0.3",
+  "version": "1.0.0",
+  "homepage": "https://github.com/cieloazul310/gatsby-theme-aoi-top-layout",
+  "repository": "github:cieloazul310/gatsby-theme-aoi-top-layout",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

@@ -1,20 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TopLayout from './src/components/TopLayout';
 
-export const wrapRootElement = ({ element }) => {
-  const storedPaletteType = localStorage.getItem('paletteType');
-  const storedUseSystemTheme = JSON.parse(localStorage.getItem('useSystemTheme'));
+export const wrapRootElement = ({ element }, pluginOptions) => {
+  const { siteId = 'palette' } = pluginOptions;
+  const storedItem = JSON.parse(localStorage.getItem(siteId));
   return (
-    <TopLayout
-      storedPaletteType={storedPaletteType}
-      storedUseSystemTheme={storedUseSystemTheme}
-    >
+    <TopLayout siteId={siteId} storedItem={storedItem}>
       {element}
     </TopLayout>
   );
-};
-
-wrapRootElement.propTypes = {
-  element: PropTypes.node
 };

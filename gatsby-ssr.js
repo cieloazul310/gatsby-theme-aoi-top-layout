@@ -1,13 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TopLayout from './src/components/TopLayout';
 
-export const wrapRootElement = ({ element }) => (
-  <TopLayout storedPaletteType="light" storedUseSystemTheme={false}>
-    {element}
-  </TopLayout>
-);
-
-wrapRootElement.propTypes = {
-  element: PropTypes.node
+export const wrapRootElement = ({ element }, pluginOptions) => {
+  return (
+    <TopLayout siteId={pluginOptions.siteId || 'palette'} storedItem={null}>
+      {element}
+    </TopLayout>
+  );
 };
