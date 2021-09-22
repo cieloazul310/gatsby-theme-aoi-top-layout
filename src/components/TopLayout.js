@@ -1,5 +1,5 @@
 import React from 'react';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import TopThemeProvider from './TopThemeProvider';
 import AppStateProvider from './AppStateProvider';
@@ -8,7 +8,7 @@ import themeReducer from '../utils/ThemeState';
 import initialTheme from '../utils/theme';
 
 export default function TopLayout({ children, storedItem, siteId }) {
-  const defaultPaletteType = initialTheme.palette.type;
+  const defaultPaletteType = initialTheme.palette.mode;
   const storedPaletteType = storedItem !== null ? storedItem.paletteType : defaultPaletteType;
   const storedUseSystemTheme = storedItem !== null ? storedItem.useSystemTheme : false;
 

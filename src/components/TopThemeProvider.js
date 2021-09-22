@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider, createMuiTheme, lighten } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme, lighten } from '@mui/material/styles';
 import initialMuiTheme from '../utils/theme';
 
 export default function TopThemeProvider({ children, paletteType }) {
   const theme = React.useMemo(() => {
-    return createMuiTheme({
+    return createTheme({
       ...initialMuiTheme,
       palette: {
         ...initialMuiTheme.palette.primary,
@@ -17,7 +17,7 @@ export default function TopThemeProvider({ children, paletteType }) {
           ...initialMuiTheme.palette.secondary,
           main: paletteType === 'dark' ? lighten(initialMuiTheme.palette.secondary.main, 0.4) : initialMuiTheme.palette.secondary.main,
         },
-        type: paletteType,
+        mode: paletteType,
       },
     });
   }, [paletteType]);

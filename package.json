@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-aoi-top-layout",
-  "version": "2.0.0-1",
+  "version": "2.0.0-2",
   "homepage": "https://github.com/cieloazul310/gatsby-theme-aoi-top-layout",
   "repository": "github:cieloazul310/gatsby-theme-aoi-top-layout",
   "main": "index.js",
@@ -17,28 +17,28 @@
     "material-ui"
   ],
   "peerDependencies": {
-    "@material-ui/core": "^4.11.4",
-    "gatsby": "^3.0.0",
-    "react-helmet": "^6.1.0"
+    "@mui/material": ">=5.0.0",
+    "gatsby": ">=3.0.0",
+    "react-helmet": ">=6.1.0"
   },
   "dependencies": {
-    "gatsby-plugin-react-helmet": "^4.4.0",
+    "gatsby-plugin-react-helmet": "^4.14.0",
     "gatsby-plugin-webfonts": "^2.1.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "eslint": "^7.25.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-flowtype": "^5.7.2",
-    "eslint-plugin-graphql": "^4.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.4"
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-config-react-app": "latest",
+    "eslint-plugin-flowtype": "latest",
+    "eslint-plugin-graphql": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "prettier": "latest",
+    "typescript": "latest"
   }
 }
