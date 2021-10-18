@@ -12,6 +12,7 @@ Moved to [gatsby-aoi] Monorepo.
 - [gatsby-starter-aoi-theme] A Gatsby starter kit using [gatsby-theme-aoi]
 - [gatsby-starter-aoi] A Gatsby starter kit (deprecated)
 
+[gatsby-aoi]: https://github.com/cieloazul310/gatsby-aoi/ "Gatsby Aoi Monorepo"
 [gatsby-theme-aoi]: https://github.com/cieloazul310/gatsby-theme-aoi/ "Gatsby Theme Aoi"
 [gatsby-starter-aoi-theme]: https://github.com/cieloazul310/gatsby-theme-aoi/ "Gatsby Starter Aoi Theme"
 [gatsby-starter-aoi]: https://github.com/cieloazul310/gatsby-starter-aoi/ "Gatsby Starter Aoi"
