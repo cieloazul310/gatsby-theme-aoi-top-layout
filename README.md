@@ -1,3 +1,5 @@
+Moved to [gatsby-aoi] Monorepo.
+
 # Gatsby Theme Aoi Top Layout
 
 [![npm version](https://badge.fury.io/js/gatsby-theme-aoi-top-layout.svg)](https://badge.fury.io/js/gatsby-theme-aoi-top-layout)
